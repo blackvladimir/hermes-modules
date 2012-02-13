@@ -1,8 +1,11 @@
 #define HERMES_REPORT_ALL
 #include "common.h"
 
-// value - { 0 - fn value, 1 - dx, 2 - dy }
-double calculate_point_value(Solution<double>* sln, int value, double x, double y)
+Module::Module(Mesh* mesh) : mesh(mesh)
+{
+}
+
+double Module::calculate_point_value(Solution<double>* sln, int value, double x, double y)
 {
   if(value == 0)
     return sln->get_pt_value(x, y, H2D_FN_VAL_0);
@@ -14,8 +17,8 @@ double calculate_point_value(Solution<double>* sln, int value, double x, double 
     return sln->get_pt_value(x, y, H2D_FN_DY_0);
 }
 
-// dummy so far
-double calculate_integral(Solution<double>* sln, int value, Hermes::vector<int> elementIDs)
+
+double Module::calculate_integral(Solution<double>* sln, int value, Hermes::vector<int> elementIDs)
 {
   double result = 0.;
   for(int i = 0; i < elementIDs.size(); i++)

@@ -3,6 +3,17 @@
 using namespace Hermes;
 using namespace Hermes::Hermes2D;
 
-double calculate_point_value(Solution<double>* sln, int value, double x, double y);
+class Module
+{
+public:
+  Module(Mesh* mesh);
 
-double calculate_integral(Solution<double>* sln, int value, Hermes::vector<int> elementIDs);
+  // value - { 0 - fn value, 1 - dx, 2 - dy }
+  double calculate_point_value(Solution<double>* sln, int value, double x, double y);
+
+  // value - { 0 - fn value, 1 - dx, 2 - dy }
+  double calculate_integral(Solution<double>* sln, int value, Hermes::vector<int> elementIDs);
+protected:
+  Solution<double> sln;
+  Mesh* mesh;
+};

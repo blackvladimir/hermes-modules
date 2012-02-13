@@ -1,4 +1,6 @@
+#define HERMES_REPORT_ALL
 #include "hermes2d.h"
+#include "../Common/common.h"
 
 using namespace Hermes;
 using namespace Hermes::Hermes2D;
@@ -11,4 +13,21 @@ class CustomWeakFormPoisson : public WeakForm<double>
 {
 public:
   CustomWeakFormPoisson(Hermes1DFunction<double>* thermalConductivity, Hermes2DFunction<double>* volumeHeatSource);
+};
+
+class ModulePoisson : public Module
+{
+public:
+  ModulePoisson(Mesh* mesh, int polynomialDegree, int noOfInitialRefinements, double boundaryTemperature, double thermalConductivity, double volumeHeatSource);
+
+  bool calculate();
+  
+  // value - { 0 - fn value, 1 - dx, 2 - dy }
+  std::string get_solution(int value);
+private:
+  int polynomialDegree;
+  int noOfInitialRefinements;
+  double boundaryTemperature;
+  double thermalConductivity;
+  double volumeHeatSource;
 };

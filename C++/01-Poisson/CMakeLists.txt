@@ -1,6 +1,6 @@
 project(01-Poisson)
 
-set(SRC main.cpp definitions.cpp)
+set(SRC definitions.cpp)
 
 set(HEADERS definitions.h)
 

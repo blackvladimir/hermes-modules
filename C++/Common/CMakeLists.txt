@@ -1,8 +1,8 @@
-project(hermes-module)
+project(hermes_module)
 
-set(SRC common.cpp)
+set(SRC hermes_module.cpp)
 
-set(HEADERS common.h)
+set(HEADERS hermes_module.h)
 
 add_library(${PROJECT_NAME} SHARED ${SRC} ${HEADERS})
 

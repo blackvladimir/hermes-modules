@@ -1,6 +1,6 @@
 #define HERMES_REPORT_ALL
 #include "hermes2d.h"
-#include "../Common/common.h"
+#include "../Common/hermes_module.h"
 
 using namespace Hermes;
 using namespace Hermes::Hermes2D;

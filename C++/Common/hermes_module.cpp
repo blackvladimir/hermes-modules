@@ -1,5 +1,5 @@
 #define HERMES_REPORT_ALL
-#include "common.h"
+#include "hermes_module.h"
 
 Module::Module(Mesh* mesh) : mesh(mesh)
 {

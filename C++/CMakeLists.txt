@@ -45,7 +45,5 @@ project(hermes_tutorial)
 	include_directories(${HERMES2D_INCLUDE_PATH})
 	include_directories(${DEP_INCLUDE_PATHS})
 
-  # --- SUBFOLDERS WITH TUTORIAL TOPICS
-  #
-  # Linear problems.
+  add_subdirectory(Common)
   add_subdirectory(01-Poisson)

@@ -1,4 +1,4 @@
-project(hermes-modules-common)
+project(hermes-module)
 
 set(SRC common.cpp)
 

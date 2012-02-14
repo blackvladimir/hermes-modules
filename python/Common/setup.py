@@ -7,7 +7,6 @@ setup(
     ext_modules = [Extension("hermes_module", [
     "hermes_module.pyx",
     "hermes_module.pxd",
-    "hermes_module.pxi",
-    "hermes_module_common.pxd"
+    "hermes_module.pxi"
     ],language="c++",libraries=["hermes_module"])]
 )

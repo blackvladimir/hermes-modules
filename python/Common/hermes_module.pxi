@@ -1,5 +1,5 @@
 from hermes2d cimport PyMesh, PySolutionReal
-from hermes_module_common cimport *
+from hermes_module cimport *
 
 cdef class PyModule:
   cdef Module* thisptr

@@ -9,11 +9,11 @@ cdef class PyModule:
     del self.thisptr
 
   def calculate_point_value(self, sln, int value, double x, double y):
-    return self.thisptr.calculate_point_value((<PySolutionReal> sln).thisptr, value, x, y)
+    return self.thisptr.calculate_point_value(<Solution[double]*> (<PySolutionReal> sln).thisptr, value, x, y)
 
   def calculate_integral(self, sln, int value, elementIDs):
     cdef vector[int] celementIDs
     cdef int i
     for i in elementIDs:
       celementIDs.push_back(i)
-    return self.thisptr.calculate_integral((<PySolutionReal> sln).thisptr, value, celementIDs)
+    return self.thisptr.calculate_integral(<Solution[double]*> (<PySolutionReal> sln).thisptr, value, celementIDs)

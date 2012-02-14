@@ -3,7 +3,7 @@
 
 #define HERMES_REPORT_ALL
 #include "hermes2d.h"
-#include "../Common/hermes_module.h"
+#include "../hermes_module/hermes_module.h"
 
 using namespace Hermes;
 using namespace Hermes::Hermes2D;

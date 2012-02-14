@@ -51,5 +51,5 @@ project(hermes_tutorial)
 	include_directories(${HERMES2D_INCLUDE_PATH})
 	include_directories(${DEP_INCLUDE_PATHS})
 
-  add_subdirectory(Common)
-  add_subdirectory(01-Poisson)
+  add_subdirectory(hermes_module)
+  add_subdirectory(hermes_modulePoisson)

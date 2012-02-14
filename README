@@ -1,0 +1,3 @@
+Contains C++ and Python interfaces for Hermes modules.
+
+To install everything, run install.sh.

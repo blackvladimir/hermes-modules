@@ -20,6 +20,12 @@ project(hermes_tutorial)
 	# Allow to override the default values in CMake.vars:
 	include(CMake.vars OPTIONAL)
 
+        set(TARGET_ROOT             /usr/local) 
+        #default installation path for the library will be /usr/local/lib
+        #for include files /usr/local/include
+
+
+
   # --- DEPENDENCIES
   #
 	find_package(PTHREAD REQUIRED)

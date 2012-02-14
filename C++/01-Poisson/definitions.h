@@ -1,3 +1,6 @@
+#ifndef POISSON_DEFINITIONS_H
+#define POISSON_DEFINITIONS_H
+
 #define HERMES_REPORT_ALL
 #include "hermes2d.h"
 #include "../Common/hermes_module.h"
@@ -31,3 +34,5 @@ private:
   double thermalConductivity;
   double volumeHeatSource;
 };
+
+#endif

@@ -1,9 +1,7 @@
 from hermes2d cimport PyMesh, PySolutionReal
-from hermes_module cimport *
+from hermes_common cimport *
 
 cdef class PyModule:
-  cdef Module* thisptr
-  
   def __cinit__(self, mesh):
     self.thisptr=new Module((<PyMesh> mesh).thisptr)
     

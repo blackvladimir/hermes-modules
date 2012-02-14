@@ -1,3 +1,6 @@
+#ifndef COMMON_HERMES_MODULE_H
+#define COMMON_HERMES_MODULE_H
+
 #include "hermes2d.h"
 
 using namespace Hermes;
@@ -17,3 +20,5 @@ protected:
   Solution<double> sln;
   Mesh* mesh;
 };
+
+#endif

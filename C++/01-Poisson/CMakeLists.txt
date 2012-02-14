@@ -1,4 +1,4 @@
-project(01-Poisson)
+project(hermes_modulePoisson)
 
 set(SRC definitions.cpp)
 
